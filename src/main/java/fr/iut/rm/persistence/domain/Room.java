@@ -4,6 +4,8 @@ import javax.persistence.*;
 import javax.validation.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * A classic room
@@ -22,6 +24,7 @@ public class Room {
      * Room's name
      */
     @Column(nullable = false, unique = true)
+    @Size(min=3, max=30)
     private String name;
 
 
@@ -37,7 +40,7 @@ public class Room {
      * Room's capacity
      */
     @Column(nullable = false)
-    @Min(0)
+    @NotNull @Min(0)
     private int capacity;
 
     final int MAX_CAPACITY = 33;
