@@ -29,7 +29,7 @@
             <#elseif (room.getTaux() >= 70)>
                 <div class="panel panel-danger">
             </#if>
-                    <div class="panel-title text-center">
+            <div class="panel-heading">
                         <h2>Room : ${room.getName()}</h2>
                     </div>
                     <div class="panel-body text-center">
