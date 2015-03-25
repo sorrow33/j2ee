@@ -27,6 +27,7 @@ public class WebModule extends ServletModule {
         serve("/admin/home").with(AdminServlet.class);
         serve("/tests").with(ListServlet2.class);
         serve("/qrcode/in").with(QrinServlet.class);
+        serve("/qrcode/out").with(QroutServlet.class);
 
 
         logger.info("   install JpaPersistModule room-manager");

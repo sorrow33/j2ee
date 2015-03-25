@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 @Singleton
-public class QrinServlet extends HttpServlet {
+public class QroutServlet extends HttpServlet {
     /**
      * the dao to access rooms stored in DB *
      */
@@ -44,7 +44,7 @@ public class QrinServlet extends HttpServlet {
     /**
      * Logger
      */
-    private static final Logger logger = LoggerFactory.getLogger(QrinServlet.class);
+    private static final Logger logger = LoggerFactory.getLogger(QroutServlet.class);
 
 
     /**
@@ -64,7 +64,7 @@ public class QrinServlet extends HttpServlet {
         QRCodeWriter writer = new QRCodeWriter();
         BitMatrix bitMatrix = null;
         try {
-            String url = "Enter";
+            String url = "Goodbye";
             bitMatrix = writer.encode(url, BarcodeFormat.QR_CODE, 300, 300);
         } catch (WriterException e) {
             e.printStackTrace();

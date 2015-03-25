@@ -48,18 +48,6 @@
             </div>
 
     </div> <!-- /container -->
-            <script type="text/javascript">
-
-                function QRin ( )
-                {
-                    window.document.location.href="qrcode/in?name=201";
-                }
-
-                function QRout ( )
-                {
-                    window.document.location.href="qrcode/out";
-                }
-            </script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
