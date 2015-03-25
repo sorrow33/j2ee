@@ -36,11 +36,11 @@
                         <p>Capacity : ${room.getCapacity()}</p>
                         <p>Folks : ${room.getFolks()}</p>
                     </div>
-            <button type="button" class="btn btn-default btn-sm">
+            <button type="button" class="btn btn-default btn-sm" onclick='window.document.location.href="qrcode/in?name=${room.getName()}";'>
                 <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span> Qr in
             </button>
-            <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span> Qr out
+            <button type="button" class="btn btn-default btn-sm" onclick='window.document.location.href="qrcode/out?name=${room.getName()}";'>
+            <span class="glyphicon glyphicon-qrcode" aria-hidden="true" ></span> Qr out
             </button>
                 </div>
             </div>
@@ -48,7 +48,18 @@
             </div>
 
     </div> <!-- /container -->
+            <script type="text/javascript">
 
+                function QRin ( )
+                {
+                    window.document.location.href="qrcode/in?name=201";
+                }
+
+                function QRout ( )
+                {
+                    window.document.location.href="qrcode/out";
+                }
+            </script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

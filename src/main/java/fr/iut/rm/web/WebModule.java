@@ -3,11 +3,7 @@ package fr.iut.rm.web;
 import com.google.inject.persist.PersistFilter;
 import com.google.inject.persist.jpa.JpaPersistModule;
 import com.google.inject.servlet.ServletModule;
-import fr.iut.rm.web.servlet.AdminServlet;
-import fr.iut.rm.web.servlet.BootFreeServlet;
-import fr.iut.rm.web.servlet.InitServlet;
-import fr.iut.rm.web.servlet.ListServlet;
-import fr.iut.rm.web.servlet.ListServlet2;
+import fr.iut.rm.web.servlet.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,6 +26,7 @@ public class WebModule extends ServletModule {
         serve("/demo").with(BootFreeServlet.class);
         serve("/admin/home").with(AdminServlet.class);
         serve("/tests").with(ListServlet2.class);
+        serve("/qrcode/in").with(QrinServlet.class);
 
 
         logger.info("   install JpaPersistModule room-manager");
