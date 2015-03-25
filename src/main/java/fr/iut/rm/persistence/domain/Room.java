@@ -88,16 +88,9 @@ public class Room {
 
 
 
-    public int tauxRemplissage (int capacity) {
-        float taux;
-        taux = (capacity / MAX_CAPACITY);
-        if (taux < 40 / 100)
-            return 1;
-        else if (taux < 70 / 100)
-            return 2;
-        else
-            return 3;
-
+    public int getTaux(){
+        float result = (capacity/MAX_CAPACITY)*100;
+        return (int)result;
     }
 
 }
