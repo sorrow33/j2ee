@@ -24,7 +24,6 @@ public class Room {
      * Room's name
      */
     @Column(nullable = false, unique = true)
-    @Size(min=3, max=30)
     private String name;
 
 
@@ -40,10 +39,9 @@ public class Room {
      * Room's capacity
      */
     @Column(nullable = false)
-    @NotNull @Min(0)
     private int capacity;
 
-    final int MAX_CAPACITY = 33;
+    final int MAX_CAPACITY = 30;
 
 
     /**
@@ -92,7 +90,7 @@ public class Room {
 
 
     public int getTaux(){
-        float result = (capacity/MAX_CAPACITY)*100;
+        float result = ((float)capacity/(float)MAX_CAPACITY)*100;
         return (int)result;
     }
 

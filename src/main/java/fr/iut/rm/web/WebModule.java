@@ -7,6 +7,7 @@ import fr.iut.rm.web.servlet.AdminServlet;
 import fr.iut.rm.web.servlet.BootFreeServlet;
 import fr.iut.rm.web.servlet.InitServlet;
 import fr.iut.rm.web.servlet.ListServlet;
+import fr.iut.rm.web.servlet.ListServlet2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,6 +29,7 @@ public class WebModule extends ServletModule {
         serve("/rooms").with(ListServlet.class);
         serve("/demo").with(BootFreeServlet.class);
         serve("/admin/home").with(AdminServlet.class);
+        serve("/tests").with(ListServlet2.class);
 
 
         logger.info("   install JpaPersistModule room-manager");
