@@ -59,17 +59,17 @@ public class QrinServlet extends HttpServlet {
     protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
-        String aa = req.getQueryString().toString();
-        System.out.println(aa);
+
         QRCodeWriter writer = new QRCodeWriter();
         BitMatrix bitMatrix = null;
         try {
-            String url = "Enter";
+            String url = "Enter"+req.getParameter("name").toString();
             bitMatrix = writer.encode(url, BarcodeFormat.QR_CODE, 300, 300);
         } catch (WriterException e) {
             e.printStackTrace();
         }
         resp.setContentType("image/png");
         MatrixToImageWriter.writeToStream(bitMatrix, "png", resp.getOutputStream());
+
     }
 }
