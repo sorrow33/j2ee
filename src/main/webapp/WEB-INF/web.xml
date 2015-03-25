@@ -22,6 +22,10 @@
         <role-name>rm-admin</role-name>
     </security-role>
 
+    <security-role>
+        <role-name>user</role-name>
+    </security-role>
+
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>
