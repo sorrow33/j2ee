@@ -34,7 +34,14 @@
                     </div>
                     <div class="panel-body text-center">
                         <p>Capacity : ${room.getCapacity()}</p>
+                        <p>Folks : ${room.getFolks()}</p>
                     </div>
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span> Qr in
+            </button>
+            <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span> Qr out
+            </button>
                 </div>
             </div>
     </#list>

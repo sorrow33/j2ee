@@ -39,17 +39,20 @@ public class InitServlet extends HttpServlet {
         if (quantity == 1) {
             Room room = new Room();
             room.setName("201");
-            room.setCapacity(3);
+            room.setCapacity(30);
+            room.setFolks(3);
             roomDao.saveOrUpdate(room);
 
             Room room1 = new Room();
             room1.setName("202");
-            room1.setCapacity(15);
+            room1.setCapacity(30);
+            room1.setFolks(15);
             roomDao.saveOrUpdate(room1);
 
             Room room2 = new Room();
+            room2.setCapacity(30);
             room2.setName("203");
-            room2.setCapacity(29);
+            room2.setFolks(29);
             roomDao.saveOrUpdate(room2);
 
         } else {

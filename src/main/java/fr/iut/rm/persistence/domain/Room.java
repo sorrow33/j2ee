@@ -20,6 +20,12 @@ public class Room {
     @GeneratedValue
     private long id;
 
+    public Room(String name, int capacity) {
+        this.name = name;
+        this.capacity = capacity;
+        this.folks = 0;
+    }
+
     /**
      * Room's name
      */
@@ -41,7 +47,15 @@ public class Room {
     @Column(nullable = false)
     private int capacity;
 
-    final int MAX_CAPACITY = 30;
+    public int getFolks() {
+        return folks;
+    }
+
+    public void setFolks(int folks) {
+        this.folks = folks;
+    }
+
+    private int folks;
 
 
     /**
@@ -90,7 +104,7 @@ public class Room {
 
 
     public int getTaux(){
-        float result = ((float)capacity/(float)MAX_CAPACITY)*100;
+        float result = ((float)folks/(float)capacity)*100;
         return (int)result;
     }
 

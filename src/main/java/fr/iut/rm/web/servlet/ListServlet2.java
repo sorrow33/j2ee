@@ -22,7 +22,7 @@ import java.util.Map;
 
 /**
  * Dumb servlet to output room list
- */       //ListServlet
+ */       //public class CreateServlet extends HttpServlet {
 @Singleton
 public class ListServlet2 extends HttpServlet {
     /**
